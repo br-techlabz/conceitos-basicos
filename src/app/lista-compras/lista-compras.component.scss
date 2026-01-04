@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px #575757;
+    padding: 20px 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+h1{
+    font-size: 30px;
+    color: #575757;
+    margin-bottom: 25px;
+}
+
+.add-item-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input{
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #0941b9;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+input:focus{
+    outline: none;
+    border-color: #041a47;
+}
+
+
+button{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #4e7ada;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #0941b9; 
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+thead{
+    background: #041a47;
+    color: #fff;
+}
+
+table thead th{
+    background: #041a47;
+}
+
+th, td{
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #fff;
+}
+
+tr:nth-child(odd){
+    background-color: #fff;
+}
+
+tr:nth-child(even){
+    background-color: #7a88f5;
+}
+
+input[type="checkbox"]{
+    transform: scale(1.2);
+    cursor: pointer;
+}
