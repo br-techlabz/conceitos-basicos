@@ -20,31 +20,29 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th>1</th>
-            <th>Arroz</th>
+
+        @for (item of lista; track item.id) {
+            <tr>
+                <th>{{ item.id }}</th>
+                <th>{{ item.nome }}</th>
+                <th><input type="checkbox"/></th>
+            </tr>
+
+        }@empty {
+            <tr colspan="4">
+                Nenhum Item adicionado.
+            </tr>
+        }
+
+        <!--OU -->
+
+        <!--
+        <tr *ngFor="let item of lista">
+            <th>{{ item.id }}</th>
+            <th>{{ item.nome }}</th>
             <th><input type="checkbox"/></th>
         </tr>
-        <tr>
-            <th>2</th>
-            <th>Feijão</th>
-            <th><input type="checkbox"/></th>
-        </tr>
-        <tr>
-            <th>3</th>
-            <th>Macarrão</th>
-            <th><input type="checkbox"/></th>
-        </tr>
-        <tr>
-            <th>4</th>
-            <th>Açucar</th>
-            <th><input type="checkbox"/></th>
-        </tr>
-        <tr>
-            <th>5</th>
-            <th>Óleo</th>
-            <th><input type="checkbox"/></th>
-        </tr>
+        -->
     </tbody>
 </table>
 </div>
