@@ -25,4 +25,9 @@ export class ListaComprasComponent {
 
     this.item =  '';
   }
+
+  riscarItem(itemLista: ItemLista){
+    itemLista.comprado = !itemLista.comprado;
+    console.log("Riscado ", itemLista.comprado);
+  }
 }

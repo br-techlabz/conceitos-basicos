@@ -24,8 +24,14 @@
         @for (item of lista; track item.id) {
             <tr>
                 <th>{{ item.id }}</th>
-                <th>{{ item.nome }}</th>
-                <th><input type="checkbox"/></th>
+                <th>
+                    <span [ngClass]="{'item-riscado' : item.comprado}">
+                        {{ item.nome }}
+                    </span>
+                </th>
+                <th><input type="checkbox" 
+                    (click)="riscarItem(item)" 
+                    [checked]="item.comprado"/></th>
             </tr>
 
         }@empty {
