@@ -23,10 +23,17 @@
             @for (item of lista; track item.id) {
                 <tr>
                     <td>{{ item.id }}</td>
-                    <td>{{ item.nome }}</td>
-                    <td><input type="checkbox" /></td>
+                    <td>
+                        <span>
+                            {{ item.nome }}
+                        </span>
+                    </td>
+                    <td><input type="checkbox" (click)="riscarItem(item)" [checked]="item.comprado" />
+                </tr>           
+            }@empty {
+                <tr colspan="3">
+                    Nenhum item adicionado.
                 </tr>
-            
             }
           
         </tbody>
